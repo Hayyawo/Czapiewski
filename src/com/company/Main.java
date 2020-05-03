@@ -16,7 +16,7 @@ public class Main {
         dog.takeForwalk();
         dog.takeForwalk();
         dog.takeForwalk();
-        dog.takeForwalk();
+        dog.takeForwalk(); dog.takeForwalk();
 
 
     }
