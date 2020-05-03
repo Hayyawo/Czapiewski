@@ -10,7 +10,7 @@ public class Human {
         if(salary <= 0){
             System.out.println("U are poor");
         }
-        System.out.println("your salary sent to the accountant ");
+        System.out.println("your salary sent to the accountant, ");
 
 
 
