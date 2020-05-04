@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     final String model;
     final String manufacturer;
     final String yearOfProduction;
@@ -45,6 +45,7 @@ public class Car extends Device {
         }
 
     }
+    abstract void refuel();
 
 
 }
