@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animal implements IFeedable {
+public class Animal implements IFeedable, ISaleable {
     final String species;
     public Double weight = 10.0;
     public static final Double DEFAULT_FOODWEIGHT =10.0;
@@ -26,11 +26,25 @@ public class Animal implements IFeedable {
         }
     }
 
-    public void takeForwalk(){
+    public void takeForWalk(){
         System.out.println("Animal taken for walk. Current weight is "+weight);
         weight -=5;
         if(weight <= 0){
             System.out.println("dead");
+        }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double cost) throws Exception {
+          if (seller.pet == this && buyer.cash >= cost) {
+            seller.cash += cost;
+            seller.pet = null;
+            buyer.cash -= cost;
+            buyer.pet = this;
+            System.out.println(buyer.toString() + " buy " + this.toString() +" from "+ seller.toString() + " for " + cost);
+        } else {
+            System.out.println("Buyer don't have enough money or seller don't have item");
+
         }
     }
 }

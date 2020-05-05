@@ -1,8 +1,10 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Human extends Animal {
+    public Phone phone;
     Animal pet;
     public Car car;
     Double salary;
