@@ -1,6 +1,8 @@
 package com.company;
 
-public class Animal implements IFeedable, ISaleable {
+import com.company.creatures.IFeedable;
+
+public abstract class Animal implements IFeedable, ISaleable {
     final String species;
     public Double weight = 10.0;
     public static final Double DEFAULT_FOODWEIGHT =10.0;
